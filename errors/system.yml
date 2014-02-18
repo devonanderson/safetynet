@@ -1,0 +1,4 @@
+DEFAULT:
+    id: 100
+    code: 500
+    message: 'Generic system error'
