@@ -1,4 +1,4 @@
 safetynet
 =========
 
-Advanced error handling for express.js
+robust, scalable error handling middleware for express.js
