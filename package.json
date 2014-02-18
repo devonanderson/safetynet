@@ -1,0 +1,25 @@
+{
+  "name": "safetynet",
+  "description": "Advanced error handling for express.js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devonanderson/safetynet.git"
+  },
+  "keywords": [
+    "error",
+    "errors",
+    "error module",
+    "error handling",
+    "error handler",
+    "express"
+  ],
+  "main": "./lib/safetynet",
+  "dependencies": {
+    "underscore": "1.*",
+    "js-yaml": "3.*"
+  },
+  "engines": {
+    "node": "0.10.*"
+  }
+}
