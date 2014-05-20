@@ -1,4 +1,5 @@
 DEFAULT:
     id: 100
     code: 500
+    log: true
     message: 'Generic system error'

@@ -17,7 +17,8 @@
   "main": "./lib/safetynet",
   "dependencies": {
     "underscore": "1.*",
-    "js-yaml": "3.*"
+    "js-yaml": "3.*",
+    "winston": "0.7.*"
   },
   "engines": {
     "node": "0.10.*"
