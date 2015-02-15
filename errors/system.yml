@@ -1,5 +1,5 @@
 DEFAULT:
-    id: 100
-    code: 500
-    log: true
-    message: 'Generic system error'
+	id: 0
+	code: 500
+	log: true
+	message: '{0}'
