@@ -1,7 +1,7 @@
 SafetyNet
 =========
 
-Simple error logging middleware for [Express](http://github.com/visionmedia/express) that also provides error logging using [Winston](http://github.com/indexzero/winston). 
+Simple error logging middleware for [Express](http://github.com/visionmedia/express) using [Winston](http://github.com/indexzero/winston). 
 
 Safetynet uses YAML configuration files to create a library of error definitions. These definitions are used to create custom errors and simplify the error handling process.
 
@@ -15,10 +15,10 @@ First you must define your errors by either adding to the included YAML file, or
 ```
 //sample error file system.yml
 
-DEFAULT: 			//The name of the error
-  id: 100 		//The unique id
-  code: 500 	//The HTTP status code
-  log: 				//Whether or not to log the error
+DEFAULT: //The name of the error
+  id: 100 //The unique id
+  code: 500 //The HTTP status code
+  log: true //Whether or not to log the error
   message: 'Default system error' //The error message
 ```
 
@@ -28,14 +28,13 @@ You should instantiate SafetyNet in your app.js file, it should be done before y
 
 ```
 var SafetyNet = require('safetynet'),
-		errorHandler = new SafetyNet({
-			definitions: '../errors', 								//The directory where your configuration files are located
-			defaultError: 'SAFETYNET.DEFAULT', 				//You can pass any error object to SafetyNet
-			verbose: false, 													//How much to log from the error object
-			onError: function(err, req, res, next) { 	//Called when an error is passed through the Express middleware
-				next();
-			}																		 
-		});
+	errorHandler = new SafetyNet({
+		definitions: '../errors', //The directory where your configuration files are located
+		defaultError: 'SAFETYNET.DEFAULT', //You can pass any error object to SafetyNet
+		verbose: false, //How much to log from the error object
+		onError: function(err, req, res, next) { //Called when an error is passed through the Express middleware
+			next();
+		}															});
 ```
 
 Pass the SafetyNet middleware as the last call in the Express middleware chain
